@@ -28,7 +28,7 @@ def my_dag():
         with open('file.txt', 'r') as f:
             f.write('Hello World')
 
-@dag(schedule=[file])
+@dag(schedule=[file]) #Dag waits for pipeline to succees. You can even use "or (|)" and even "and (&)" operators
 def my_dag():
     ...
 
